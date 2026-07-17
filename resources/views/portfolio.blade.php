@@ -129,6 +129,88 @@
     </div>
 </section>
 
+{{-- ═══════════ EDUCATION, ACHIEVEMENTS & ORGANIZATIONS ═══════════ --}}
+<section class="section" id="background">
+    <div class="container">
+        <span class="section-label reveal">Background</span>
+        <h2 class="section-title reveal">Pendidikan, Prestasi &<br><span class="gradient-text">Organisasi</span></h2>
+        <p class="section-subtitle reveal">Perjalanan akademik, pencapaian, dan keterlibatan organisasi yang membentuk kompetensi saya.</p>
+
+        <div class="background-grid">
+            {{-- Pendidikan --}}
+            <div class="bg-column reveal">
+                <div class="bg-column-header">
+                    <div class="bg-column-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-2)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.1 2.7 3 6 3s6-1.9 6-3v-5"/></svg>
+                    </div>
+                    <h3>Pendidikan</h3>
+                </div>
+                <div class="bg-column-items">
+                    @foreach($education as $edu)
+                    <div class="edu-item">
+                        <div class="edu-icon">
+                            @if($edu['icon'] === 'university')
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.1 2.7 3 6 3s6-1.9 6-3v-5"/></svg>
+                            @else
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20"/></svg>
+                            @endif
+                        </div>
+                        <div class="edu-content">
+                            <div class="edu-year">{{ $edu['year'] }}</div>
+                            <div class="edu-institution">{{ $edu['institution'] }}</div>
+                            <div class="edu-degree">{{ $edu['degree'] }}</div>
+                        </div>
+                    </div>
+                    @endforeach
+                </div>
+            </div>
+
+            {{-- Prestasi --}}
+            <div class="bg-column reveal reveal-delay-2">
+                <div class="bg-column-header">
+                    <div class="bg-column-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-2)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+                    </div>
+                    <h3>Prestasi</h3>
+                </div>
+                <div class="bg-column-items">
+                    @foreach($achievements as $ach)
+                    <div class="achievement-item">
+                        <span class="achievement-icon">{{ $ach['icon'] }}</span>
+                        <div class="achievement-content">
+                            <div class="achievement-title">{{ $ach['title'] }}</div>
+                            <div class="achievement-detail">{{ $ach['detail'] }}</div>
+                        </div>
+                    </div>
+                    @endforeach
+                </div>
+            </div>
+
+            {{-- Organisasi --}}
+            <div class="bg-column reveal reveal-delay-3">
+                <div class="bg-column-header">
+                    <div class="bg-column-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-2)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    </div>
+                    <h3>Organisasi</h3>
+                </div>
+                <div class="bg-column-items">
+                    @foreach($organizations as $org)
+                    <div class="org-item">
+                        <div class="org-header">
+                            <div class="org-year">{{ $org['year'] }}</div>
+                            <div class="org-role">{{ $org['role'] }}</div>
+                            <div class="org-name">{{ $org['org'] }}</div>
+                        </div>
+                        <div class="org-desc">{{ $org['desc'] }}</div>
+                    </div>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 {{-- ═══════════ SKILLS ═══════════ --}}
 <section class="section" id="skills">
     <div class="container">

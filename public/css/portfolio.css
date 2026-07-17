@@ -197,6 +197,60 @@ body {
 }
 .experience-item:hover .experience-desc { color:var(--text-secondary); border-left-color:var(--accent-2); }
 
+/* ============ BACKGROUND (EDUCATION, ACHIEVEMENTS, ORGANIZATIONS) ============ */
+.background-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:28px; }
+.bg-column {
+  background:var(--bg-card); border:1px solid var(--glass-border); border-radius:var(--radius);
+  padding:28px; position:relative; overflow:hidden; transition:var(--transition);
+}
+.bg-column::before {
+  content:''; position:absolute; top:0; left:0; right:0; height:3px;
+  background:var(--gradient-primary); transform:scaleX(0); transition:var(--transition); transform-origin:left;
+}
+.bg-column:hover { border-color:var(--glass-border-hover); box-shadow:var(--shadow-glow); }
+.bg-column:hover::before { transform:scaleX(1); }
+.bg-column-header { display:flex; align-items:center; gap:14px; margin-bottom:24px; padding-bottom:16px; border-bottom:1px solid var(--glass-border); }
+.bg-column-icon {
+  width:48px; height:48px; border-radius:12px; display:flex; align-items:center; justify-content:center;
+  background:var(--gradient-card); flex-shrink:0;
+}
+.bg-column-header h3 { font-family:var(--font-heading); font-size:1.15rem; font-weight:600; }
+.bg-column-items { display:flex; flex-direction:column; gap:16px; }
+
+/* Education Items */
+.edu-item { display:flex; gap:14px; align-items:flex-start; padding:14px; border-radius:var(--radius-sm); transition:var(--transition); }
+.edu-item:hover { background:var(--bg-card-hover); }
+.edu-icon {
+  width:40px; height:40px; border-radius:10px; display:flex; align-items:center; justify-content:center;
+  background:rgba(6,182,212,0.08); border:1px solid rgba(6,182,212,0.15); flex-shrink:0;
+}
+.edu-year { font-size:0.75rem; color:var(--accent-2); font-weight:600; margin-bottom:2px; }
+.edu-institution { font-weight:600; font-size:0.95rem; color:var(--text-primary); margin-bottom:2px; }
+.edu-degree { font-size:0.85rem; color:var(--text-secondary); }
+
+/* Achievement Items */
+.achievement-item {
+  display:flex; gap:12px; align-items:flex-start; padding:12px 14px;
+  border-radius:var(--radius-sm); transition:var(--transition);
+}
+.achievement-item:hover { background:var(--bg-card-hover); }
+.achievement-icon { font-size:1.3rem; flex-shrink:0; line-height:1; margin-top:2px; }
+.achievement-title { font-weight:600; font-size:0.9rem; color:var(--text-primary); margin-bottom:2px; }
+.achievement-detail { font-size:0.82rem; color:var(--accent-3); font-weight:500; }
+
+/* Organization Items */
+.org-item { padding:14px; border-radius:var(--radius-sm); transition:var(--transition); border-left:3px solid transparent; }
+.org-item:hover { background:var(--bg-card-hover); border-left-color:var(--accent-1); }
+.org-year { font-size:0.72rem; color:var(--accent-2); font-weight:600; margin-bottom:3px; }
+.org-role { font-weight:600; font-size:0.92rem; color:var(--text-primary); margin-bottom:1px; }
+.org-name { font-size:0.82rem; color:var(--accent-3); font-weight:500; margin-bottom:6px; }
+.org-desc {
+  font-size:0.8rem; color:var(--text-muted); line-height:1.6;
+  padding-left:10px; border-left:2px solid rgba(108,92,231,0.2);
+  transition:var(--transition);
+}
+.org-item:hover .org-desc { color:var(--text-secondary); border-left-color:var(--accent-2); }
+
 .skills-grid { display:flex; flex-wrap:wrap; gap:24px; justify-content:center; }
 .skill-card {
   background:var(--bg-card); border:1px solid var(--glass-border);
@@ -390,6 +444,8 @@ body {
   .hero-stats { justify-content:center; }
   .hero-image-wrapper { width:280px; height:280px; }
   .about-grid { grid-template-columns:1fr; gap:40px; }
+  .background-grid { grid-template-columns:1fr 1fr; }
+  .background-grid .bg-column:last-child { grid-column:1 / -1; }
   .skill-card { flex:0 0 calc(50% - 12px); }
   .projects-grid { grid-template-columns:1fr; }
   .contact-grid { grid-template-columns:1fr; gap:40px; }
@@ -401,6 +457,8 @@ body {
   .nav-toggle { display:flex; }
   .nav-cta { display:none; }
   .skill-card { flex:0 0 100%; min-width:0; }
+  .background-grid { grid-template-columns:1fr; }
+  .background-grid .bg-column:last-child { grid-column:auto; }
   .hero-name { font-size:2.4rem; }
   .hero-image-wrapper { width:220px; height:220px; }
   .modal-gallery { height:280px; }

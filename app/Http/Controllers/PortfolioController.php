@@ -268,6 +268,76 @@ class PortfolioController extends Controller
             ],
         ];
 
-        return view('portfolio', compact('projects', 'skills'));
+        $education = [
+            [
+                'institution' => 'Telkom University Purwokerto',
+                'degree' => 'S1 Teknik Informatika',
+                'year' => '2023 — Sekarang',
+                'icon' => 'university',
+            ],
+            [
+                'institution' => 'SMA Negeri 2 Pati',
+                'degree' => 'Jurusan IPA',
+                'year' => '2020 — 2023',
+                'icon' => 'school',
+            ],
+        ];
+
+        $achievements = [
+            [
+                'title' => 'Penyisihan Nasional GEMASTIK 2025',
+                'detail' => 'UI/UX Design (Leader)',
+                'icon' => '🏆',
+            ],
+            [
+                'title' => 'Penyisihan Nasional GEMASTIK 2025',
+                'detail' => 'Karya Tulis Ilmiah (Anggota)',
+                'icon' => '🏆',
+            ],
+            [
+                'title' => 'Penyisihan Nasional GEMASTIK 2024',
+                'detail' => 'Data Mining (Leader)',
+                'icon' => '🏆',
+            ],
+            [
+                'title' => 'Posisi 7 Lomba Nasional UI/UX Design',
+                'detail' => 'ITASE 6.0',
+                'icon' => '🥇',
+            ],
+            [
+                'title' => 'Juara 2 Lomba Mobile Legend Internal',
+                'detail' => 'SMA Negeri 2 Pati',
+                'icon' => '🥈',
+            ],
+        ];
+
+        $organizations = [
+            [
+                'role' => 'Coach Mobile Legend',
+                'org' => 'Tel U Purwokerto Esport',
+                'year' => 'Des 2025 — Des 2026',
+                'desc' => 'Melatih strategi tim, koordinasi gameplay, dan komunikasi dalam tim kompetitif.',
+            ],
+            [
+                'role' => 'Member — Divisi AI',
+                'org' => 'SIRCLE',
+                'year' => 'Okt 2023 — Jul 2025',
+                'desc' => 'Mempelajari preprocessing data, EDA, dan dasar machine learning.',
+            ],
+            [
+                'role' => 'Member',
+                'org' => 'SRE ITTP',
+                'year' => 'Feb 2024 — Jul 2025',
+                'desc' => 'Belajar tentang Energi Terbarukan. Panitia Career Talk (12 Okt 2024).',
+            ],
+            [
+                'role' => 'Talent',
+                'org' => 'Tim Otak Kanan',
+                'year' => 'Okt 2023 — Sep 2024',
+                'desc' => 'Menyusun naskah konten promosi kampus. Talent video branding institusi.',
+            ],
+        ];
+
+        return view('portfolio', compact('projects', 'skills', 'education', 'achievements', 'organizations'));
     }
 }
