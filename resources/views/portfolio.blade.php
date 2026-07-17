@@ -48,7 +48,7 @@
                 </a>
             </div>
             <div class="hero-stats">
-                <div class="stat-item"><div class="stat-number">8+</div><div class="stat-label">Featured Projects</div></div>
+                <div class="stat-item"><div class="stat-number">9+</div><div class="stat-label">Featured Projects</div></div>
                 <div class="stat-item"><div class="stat-number">5+</div><div class="stat-label">Skills</div></div>
                 <div class="stat-item"><div class="stat-number">2+</div><div class="stat-label">Years Exp</div></div>
             </div>
