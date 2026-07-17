@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Luthfi Adi Harianto — UI/UX Designer, Frontend Developer & Quality Assurance portfolio. Specializing in UI/UX design, frontend mobile & web development, data analysis, and quality assurance.">
     <title>Luthfi Adi Harianto — Portfolio</title>
-    <link rel="stylesheet" href="{{ asset('css/portfolio.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/portfolio.css') }}?v={{ time() }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.1/lucide.min.css">
 </head>
 <body>
@@ -406,6 +406,6 @@
     </div>
 </div>
 
-<script src="{{ asset('js/portfolio.js') }}"></script>
+<script src="{{ asset('js/portfolio.js') }}?v={{ time() }}"></script>
 </body>
 </html>
