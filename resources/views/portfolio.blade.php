@@ -175,9 +175,9 @@
                             @endif
                         </div>
                         <div class="edu-content">
-                            <div class="edu-year">{{ $edu['year'] }}</div>
-                            <div class="edu-institution">{{ $edu['institution'] }}</div>
-                            <div class="edu-degree">{{ $edu['degree'] }}</div>
+                            <div class="edu-year" data-i18n="edu_year_{{ $loop->index }}">{{ $edu['year'] }}</div>
+                            <div class="edu-institution" data-i18n="edu_inst_{{ $loop->index }}">{{ $edu['institution'] }}</div>
+                            <div class="edu-degree" data-i18n="edu_deg_{{ $loop->index }}">{{ $edu['degree'] }}</div>
                         </div>
                     </div>
                     @endforeach
@@ -197,8 +197,8 @@
                     <div class="achievement-item">
                         <span class="achievement-icon">{{ $ach['icon'] }}</span>
                         <div class="achievement-content">
-                            <div class="achievement-title">{{ $ach['title'] }}</div>
-                            <div class="achievement-detail">{{ $ach['detail'] }}</div>
+                            <div class="achievement-title" data-i18n="ach_title_{{ $loop->index }}">{{ $ach['title'] }}</div>
+                            <div class="achievement-detail" data-i18n="ach_det_{{ $loop->index }}">{{ $ach['detail'] }}</div>
                         </div>
                     </div>
                     @endforeach
@@ -217,11 +217,11 @@
                     @foreach($organizations as $org)
                     <div class="org-item">
                         <div class="org-header">
-                            <div class="org-year">{{ $org['year'] }}</div>
-                            <div class="org-role">{{ $org['role'] }}</div>
-                            <div class="org-name">{{ $org['org'] }}</div>
+                            <div class="org-year" data-i18n="org_year_{{ $loop->index }}">{{ $org['year'] }}</div>
+                            <div class="org-role" data-i18n="org_role_{{ $loop->index }}">{{ $org['role'] }}</div>
+                            <div class="org-name" data-i18n="org_name_{{ $loop->index }}">{{ $org['org'] }}</div>
                         </div>
-                        <div class="org-desc">{{ $org['desc'] }}</div>
+                        <div class="org-desc" data-i18n="org_desc_{{ $loop->index }}">{{ $org['desc'] }}</div>
                     </div>
                     @endforeach
                 </div>
