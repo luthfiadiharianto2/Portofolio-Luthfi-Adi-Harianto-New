@@ -426,6 +426,106 @@ body {
 }
 .footer-social a:hover { border-color:var(--accent-1); color:var(--accent-1); transform:translateY(-3px); }
 
+/* ============ LANGUAGE SELECTOR ============ */
+.lang-selector {
+    position: relative;
+    margin-right: 16px;
+    user-select: none;
+}
+.lang-selector-trigger {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: 50px;
+    border: 1px solid var(--glass-border);
+    background: var(--bg-card);
+    cursor: pointer;
+    transition: var(--transition);
+    color: var(--text-primary);
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+.lang-selector-trigger:hover {
+    border-color: var(--glass-border-hover);
+    background: var(--bg-card-hover);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.lang-selector-trigger .lang-icon {
+    color: var(--accent-3);
+}
+.lang-selector-trigger .chevron {
+    transition: var(--transition);
+    color: var(--text-secondary);
+}
+.lang-selector.active .lang-selector-trigger {
+    border-color: var(--accent-1);
+    background: rgba(108,92,231,0.1);
+}
+.lang-selector.active .chevron {
+    transform: rotate(180deg);
+}
+
+.lang-selector-dropdown {
+    position: absolute;
+    top: calc(100% + 12px);
+    right: 0;
+    width: 200px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-sm);
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: var(--transition);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    backdrop-filter: blur(20px);
+    z-index: 1000;
+}
+.lang-selector.active .lang-selector-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+.lang-option {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 12px;
+    border-radius: var(--radius-xs);
+    cursor: pointer;
+    transition: var(--transition);
+    color: var(--text-secondary);
+}
+.lang-option:hover {
+    background: var(--bg-card-hover);
+    color: var(--text-primary);
+}
+.lang-option.active {
+    background: rgba(108,92,231,0.1);
+    color: var(--text-primary);
+}
+.lang-option .lang-flag {
+    font-size: 1.1rem;
+}
+.lang-option .lang-name {
+    font-size: 0.85rem;
+    font-weight: 500;
+    flex: 1;
+}
+.lang-option .check {
+    opacity: 0;
+    color: var(--accent-1);
+    transition: var(--transition);
+}
+.lang-option.active .check {
+    opacity: 1;
+}
+
 /* ============ ANIMATIONS ============ */
 .reveal { opacity:0; transform:translateY(40px); transition:opacity 0.8s ease, transform 0.8s ease; }
 .reveal.visible { opacity:1; transform:translateY(0); }

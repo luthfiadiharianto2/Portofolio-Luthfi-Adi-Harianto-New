@@ -20,7 +20,26 @@
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
-        <a href="#contact" class="nav-cta">Let's Talk</a>
+        <div class="lang-selector" id="lang-selector">
+            <div class="lang-selector-trigger" id="lang-selector-trigger">
+                <svg class="lang-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/><path d="M2 12h20"/></svg>
+                <span class="lang-current">English</span>
+                <svg class="chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+            </div>
+            <div class="lang-selector-dropdown">
+                <div class="lang-option" data-lang="en">
+                    <span class="lang-flag">🇬🇧</span>
+                    <span class="lang-name">English</span>
+                    <svg class="check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                </div>
+                <div class="lang-option" data-lang="id">
+                    <span class="lang-flag">🇮🇩</span>
+                    <span class="lang-name">Indonesia</span>
+                    <svg class="check" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                </div>
+            </div>
+        </div>
+        <a href="#contact" class="nav-cta" data-i18n="nav_cta">Let's Talk</a>
         <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
             <span></span><span></span><span></span>
         </button>
@@ -31,26 +50,26 @@
 <section class="hero" id="hero">
     <div class="container">
         <div class="hero-content">
-            <p class="hero-greeting"><span class="wave">👋</span> Hello, I'm</p>
+            <p class="hero-greeting"><span class="wave">👋</span> <span data-i18n="hero_greeting">Hello, I'm</span></p>
             <h1 class="hero-name">Luthfi Adi<br><span class="gradient-text">Harianto</span></h1>
             <p class="hero-title"><span id="typed-text"></span><span class="typed-cursor">|</span></p>
-            <p class="hero-desc">
+            <p class="hero-desc" data-i18n="hero_desc">
                 A passionate tech student at Telkom University Purwokerto crafting meaningful digital experiences through UI/UX design, frontend development, data analysis, and quality assurance.
             </p>
             <div class="hero-buttons">
                 <a href="#projects" class="btn-primary">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg>
-                    View Projects
+                    <span data-i18n="hero_btn_projects">View Projects</span>
                 </a>
                 <a href="#contact" class="btn-outline">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-                    Get in Touch
+                    <span data-i18n="hero_btn_contact">Get in Touch</span>
                 </a>
             </div>
             <div class="hero-stats">
-                <div class="stat-item"><div class="stat-number">9+</div><div class="stat-label">Featured Projects</div></div>
-                <div class="stat-item"><div class="stat-number">5+</div><div class="stat-label">Skills</div></div>
-                <div class="stat-item"><div class="stat-number">2+</div><div class="stat-label">Years Exp</div></div>
+                <div class="stat-item"><div class="stat-number">9+</div><div class="stat-label" data-i18n="stat_projects">Featured Projects</div></div>
+                <div class="stat-item"><div class="stat-number">5+</div><div class="stat-label" data-i18n="stat_skills">Skills</div></div>
+                <div class="stat-item"><div class="stat-number">2+</div><div class="stat-label" data-i18n="stat_years">Years Exp</div></div>
             </div>
         </div>
         <div class="hero-image">
@@ -64,16 +83,16 @@
 {{-- ═══════════ ABOUT ═══════════ --}}
 <section class="section" id="about">
     <div class="container">
-        <span class="section-label reveal">About Me</span>
-        <h2 class="section-title reveal">Turning Ideas Into<br><span class="gradient-text">Digital Reality</span></h2>
+        <span class="section-label reveal" data-i18n="about_label">About Me</span>
+        <h2 class="section-title reveal"><span data-i18n="about_title_1">Turning Ideas Into</span><br><span class="gradient-text" data-i18n="about_title_2">Digital Reality</span></h2>
         <div class="about-grid">
             <div class="about-text reveal">
-                <p>
+                <p data-i18n="about_p1">
                     I'm a multi-disciplinary tech student with a strong passion for creating intuitive user interfaces 
                     and building robust web & mobile applications. Currently pursuing my degree at 
                     <strong>Telkom University Purwokerto</strong>.
                 </p>
-                <p>
+                <p data-i18n="about_p2">
                     My journey spans across UI/UX design, frontend mobile & web development, data analysis, and quality assurance. 
                     I believe in creating digital products that not only look beautiful but also solve real problems 
                     and deliver exceptional user experiences.
@@ -101,27 +120,27 @@
                 <div class="about-card">
                     <div class="experience-item">
                         <div class="experience-year">Jul — Aug 2026</div>
-                        <div class="experience-title">Quality Assurance Intern</div>
+                        <div class="experience-title" data-i18n="exp_title_1">Quality Assurance Intern</div>
                         <div class="experience-place">PT Cazh Purwokerto</div>
-                        <div class="experience-desc">Melakukan pengujian fungsional dan non-fungsional pada produk digital perusahaan, menyusun test case, melaporkan bug melalui bug tracking system, serta memastikan kualitas produk sebelum rilis ke production.</div>
+                        <div class="experience-desc" data-i18n="exp_desc_1">Melakukan pengujian fungsional dan non-fungsional pada produk digital perusahaan, menyusun test case, melaporkan bug melalui bug tracking system, serta memastikan kualitas produk sebelum rilis ke production.</div>
                     </div>
                     <div class="experience-item">
                         <div class="experience-year">2024 — Present</div>
                         <div class="experience-title">UI/UX Designer & Developer</div>
                         <div class="experience-place">Freelance & Academic Projects</div>
-                        <div class="experience-desc">Merancang dan mengembangkan antarmuka pengguna untuk aplikasi web dan mobile, mulai dari wireframing, prototyping di Figma, hingga implementasi frontend dengan fokus pada user experience yang intuitif.</div>
+                        <div class="experience-desc" data-i18n="exp_desc_2">Merancang dan mengembangkan antarmuka pengguna untuk aplikasi web dan mobile, mulai dari wireframing, prototyping di Figma, hingga implementasi frontend dengan fokus pada user experience yang intuitif.</div>
                     </div>
                     <div class="experience-item">
                         <div class="experience-year">2023 — Present</div>
                         <div class="experience-title">Informatics Student</div>
                         <div class="experience-place">Telkom University Purwokerto</div>
-                        <div class="experience-desc">Menempuh pendidikan S1 Informatika dengan fokus pada pengembangan perangkat lunak, basis data, algoritma, serta proyek-proyek akademik di bidang web, mobile, dan data analysis.</div>
+                        <div class="experience-desc" data-i18n="exp_desc_3">Menempuh pendidikan S1 Informatika dengan fokus pada pengembangan perangkat lunak, basis data, algoritma, serta proyek-proyek akademik di bidang web, mobile, dan data analysis.</div>
                     </div>
                     <div class="experience-item">
                         <div class="experience-year">2023 — 2024</div>
                         <div class="experience-title">Web Development Learner</div>
                         <div class="experience-place">Self-taught & Bootcamps</div>
-                        <div class="experience-desc">Mempelajari fundamental web development secara otodidak dan melalui bootcamp online, meliputi HTML, CSS, JavaScript, PHP, Laravel, serta konsep REST API dan database management.</div>
+                        <div class="experience-desc" data-i18n="exp_desc_4">Mempelajari fundamental web development secara otodidak dan melalui bootcamp online, meliputi HTML, CSS, JavaScript, PHP, Laravel, serta konsep REST API dan database management.</div>
                     </div>
                 </div>
             </div>
@@ -132,9 +151,9 @@
 {{-- ═══════════ EDUCATION, ACHIEVEMENTS & ORGANIZATIONS ═══════════ --}}
 <section class="section" id="background">
     <div class="container">
-        <span class="section-label reveal">Background</span>
-        <h2 class="section-title reveal">Pendidikan, Prestasi &<br><span class="gradient-text">Organisasi</span></h2>
-        <p class="section-subtitle reveal">Perjalanan akademik, pencapaian, dan keterlibatan organisasi yang membentuk kompetensi saya.</p>
+        <span class="section-label reveal" data-i18n="bg_label">Background</span>
+        <h2 class="section-title reveal"><span data-i18n="bg_title_1">Pendidikan, Prestasi &</span><br><span class="gradient-text" data-i18n="bg_title_2">Organisasi</span></h2>
+        <p class="section-subtitle reveal" data-i18n="bg_subtitle">Perjalanan akademik, pencapaian, dan keterlibatan organisasi yang membentuk kompetensi saya.</p>
 
         <div class="background-grid">
             {{-- Pendidikan --}}
@@ -143,7 +162,7 @@
                     <div class="bg-column-icon">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-2)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.1 2.7 3 6 3s6-1.9 6-3v-5"/></svg>
                     </div>
-                    <h3>Pendidikan</h3>
+                    <h3 data-i18n="bg_edu_title">Pendidikan</h3>
                 </div>
                 <div class="bg-column-items">
                     @foreach($education as $edu)
@@ -171,7 +190,7 @@
                     <div class="bg-column-icon">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-2)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
                     </div>
-                    <h3>Prestasi</h3>
+                    <h3 data-i18n="bg_ach_title">Prestasi</h3>
                 </div>
                 <div class="bg-column-items">
                     @foreach($achievements as $ach)
@@ -192,7 +211,7 @@
                     <div class="bg-column-icon">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-2)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                     </div>
-                    <h3>Organisasi</h3>
+                    <h3 data-i18n="bg_org_title">Organisasi</h3>
                 </div>
                 <div class="bg-column-items">
                     @foreach($organizations as $org)
@@ -214,9 +233,9 @@
 {{-- ═══════════ SKILLS ═══════════ --}}
 <section class="section" id="skills">
     <div class="container">
-        <span class="section-label reveal">What I Do</span>
-        <h2 class="section-title reveal">My <span class="gradient-text">Expertise</span></h2>
-        <p class="section-subtitle reveal">Combining creativity with technical skills to build products that make a difference.</p>
+        <span class="section-label reveal" data-i18n="skills_label">What I Do</span>
+        <h2 class="section-title reveal"><span data-i18n="skills_title_1">My </span><span class="gradient-text" data-i18n="skills_title_2">Expertise</span></h2>
+        <p class="section-subtitle reveal" data-i18n="skills_subtitle">Combining creativity with technical skills to build products that make a difference.</p>
         <div class="skills-grid">
             @foreach($skills as $index => $skill)
             <div class="skill-card reveal reveal-delay-{{ $index + 1 }}">
@@ -248,12 +267,12 @@
 {{-- ═══════════ PROJECTS ═══════════ --}}
 <section class="section" id="projects">
     <div class="container">
-        <span class="section-label reveal">Portfolio</span>
-        <h2 class="section-title reveal">Featured <span class="gradient-text">Projects</span></h2>
-        <p class="section-subtitle reveal">A selection of projects that showcase my skills across design and development.</p>
+        <span class="section-label reveal" data-i18n="projects_label">Portfolio</span>
+        <h2 class="section-title reveal"><span data-i18n="projects_title_1">Featured </span><span class="gradient-text" data-i18n="projects_title_2">Projects</span></h2>
+        <p class="section-subtitle reveal" data-i18n="projects_subtitle">A selection of projects that showcase my skills across design and development.</p>
 
         <div class="project-filters reveal">
-            <button class="filter-btn active" data-filter="all">Semua Proyek</button>
+            <button class="filter-btn active" data-filter="all" data-i18n="filter_all">Semua Proyek</button>
             <button class="filter-btn" data-filter="uiux">UI/UX Design</button>
             <button class="filter-btn" data-filter="web">Web & Mobile</button>
             <button class="filter-btn" data-filter="data">Data Analysis</button>
@@ -263,6 +282,7 @@
         <div class="projects-grid">
             @foreach($projects as $index => $project)
             <div class="project-card reveal reveal-delay-{{ ($index % 4) + 1 }}"
+                 data-id="{{ $project['id'] }}"
                  data-category="{{ $project['category'] }}"
                  data-name="{{ $project['name'] }}"
                  data-tagline="{{ $project['tagline'] }}"
@@ -276,7 +296,7 @@
                 <div class="project-card-image">
                     <img src="{{ asset($project['thumbnail']) }}" alt="{{ $project['name'] }}" loading="lazy">
                     <div class="project-card-overlay">
-                        <span>
+                         <span data-i18n="view_details">
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
                             View Details
                         </span>
@@ -303,13 +323,13 @@
 {{-- ═══════════ CONTACT ═══════════ --}}
 <section class="section" id="contact">
     <div class="container">
-        <span class="section-label reveal">Get in Touch</span>
-        <h2 class="section-title reveal">Let's Work <span class="gradient-text">Together</span></h2>
-        <p class="section-subtitle reveal">Have a project in mind? I'd love to hear about it.</p>
+        <span class="section-label reveal" data-i18n="contact_label">Get in Touch</span>
+        <h2 class="section-title reveal"><span data-i18n="contact_title_1">Let's Work </span><span class="gradient-text" data-i18n="contact_title_2">Together</span></h2>
+        <p class="section-subtitle reveal" data-i18n="contact_subtitle">Have a project in mind? I'd love to hear about it.</p>
         <div class="contact-grid">
             <div class="contact-info reveal">
-                <h3>Contact Information</h3>
-                <p>Feel free to reach out through any of the platforms below. I'm always open to discussing new projects and opportunities.</p>
+                <h3 data-i18n="contact_info_title">Contact Information</h3>
+                <p data-i18n="contact_info_desc">Feel free to reach out through any of the platforms below. I'm always open to discussing new projects and opportunities.</p>
                 <div class="contact-links">
                     <a href="mailto:luthfiadiharianto2@gmail.com" class="contact-link">
                         <div class="contact-link-icon">
@@ -342,20 +362,20 @@
             </div>
             <form class="contact-form reveal reveal-delay-2" onsubmit="event.preventDefault(); alert('Thank you for your message!');">
                 <div class="form-group">
-                    <label for="name">Your Name</label>
+                    <label for="name" data-i18n="form_name">Your Name</label>
                     <input type="text" id="name" placeholder="John Doe" required>
                 </div>
                 <div class="form-group">
-                    <label for="email">Email Address</label>
+                    <label for="email" data-i18n="form_email">Email Address</label>
                     <input type="email" id="email" placeholder="john@example.com" required>
                 </div>
                 <div class="form-group">
-                    <label for="message">Message</label>
+                    <label for="message" data-i18n="form_message">Message</label>
                     <textarea id="message" placeholder="Tell me about your project..." required></textarea>
                 </div>
                 <button type="submit" class="btn-primary" style="width:100%; justify-content:center;">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
-                    Send Message
+                    <span data-i18n="form_submit">Send Message</span>
                 </button>
             </form>
         </div>
@@ -376,7 +396,7 @@
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
             </a>
         </div>
-        <p>&copy; {{ date('Y') }} Luthfi Adi Harianto. Crafted with passion.</p>
+        <p>&copy; {{ date('Y') }} Luthfi Adi Harianto. <span data-i18n="footer_text">Crafted with passion.</span></p>
     </div>
 </footer>
 
@@ -395,12 +415,12 @@
             <p class="modal-tagline" id="modal-tagline"></p>
             <p id="modal-desc"></p>
             <div id="modal-steps-wrapper" style="display:none;">
-                <div class="modal-section-title">Development Steps</div>
+                <div class="modal-section-title" data-i18n="modal_steps_title">Development Steps</div>
                 <div class="modal-steps" id="modal-steps"></div>
             </div>
-            <div class="modal-section-title">Key Features</div>
+            <div class="modal-section-title" data-i18n="modal_features_title">Key Features</div>
             <div class="modal-features" id="modal-features"></div>
-            <div class="modal-section-title">Tech Stack</div>
+            <div class="modal-section-title" data-i18n="modal_tech_title">Tech Stack</div>
             <div class="modal-tech-tags" id="modal-tech"></div>
         </div>
     </div>
